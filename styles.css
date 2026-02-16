@@ -1805,12 +1805,19 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
   section {
-    padding: 4rem 0;
+    padding: 3rem 0;
+    overflow-x: hidden;
   }
 
   .container {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   /* Hero */
@@ -1829,17 +1836,32 @@ footer {
 
   /* Section titles */
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    word-wrap: break-word;
   }
 
   .section-body {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
   }
 
   /* Video */
   .video-frame,
   .video-with-branches {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+
+  .video-wrapper {
+    border-radius: 10px;
+  }
+
+  .video-glow {
+    inset: -20px;
+    filter: blur(30px);
   }
 
   /* Hide branches on mobile */
@@ -1862,18 +1884,26 @@ footer {
 
   /* Secret section */
   .secret-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .secret-body {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+  }
+
+  .secret-video-wrapper {
+    max-width: 100%;
   }
 
   /* GTM Tree */
+  .gtm-tree {
+    max-width: 100%;
+  }
+
   .gtm-level {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .gtm-connector-horizontal,
@@ -1884,110 +1914,156 @@ footer {
   .gtm-sub-level {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .gtm-root h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .gtm-node {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .gtm-node-group {
+    max-width: 100%;
   }
 
   .gtm-leaf {
     max-width: 100%;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .gtm-status-inline {
+    font-size: 0.65rem;
   }
 
   /* Traction */
   .traction-timeline {
-    padding-left: 70px;
+    padding-left: 60px;
   }
 
   .traction-line {
-    left: 55px;
+    left: 45px;
   }
 
   .traction-date {
-    width: 50px;
-    font-size: 0.65rem;
-    left: -60px;
+    width: 45px;
+    font-size: 0.6rem;
+    left: -55px;
   }
 
   .traction-card {
-    padding: 1rem 1.2rem;
+    padding: 0.8rem 1rem;
   }
 
   .traction-card h4 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 
   .traction-card p {
+    font-size: 0.75rem;
+  }
+
+  .traction-tag {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .traction-launch {
     font-size: 0.8rem;
   }
 
   /* Competitor table */
+  .comp-table-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .comp-table {
+    font-size: 0.6rem;
+  }
+
   .comp-table th,
   .comp-table td {
-    padding: 0.6rem 0.4rem;
-    font-size: 0.7rem;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
   }
 
   .comp-table td:first-child {
-    padding-left: 0.6rem;
-    font-size: 0.75rem;
+    padding-left: 0.4rem;
+    font-size: 0.6rem;
+    white-space: normal;
+    min-width: 80px;
+  }
+
+  .comp-table th {
+    font-size: 0.55rem;
   }
 
   .check, .cross {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Raise */
   .raise-card {
-    padding: 2rem;
-    min-width: 150px;
+    padding: 1.5rem;
+    min-width: auto;
+    width: 100%;
   }
 
   .raise-amount {
     font-size: 2rem;
   }
 
+  .use-of-funds {
+    max-width: 100%;
+  }
+
+  .fund-info {
+    font-size: 0.8rem;
+  }
+
   /* Roadmap */
   .roadmap-track {
     height: 140px;
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .roadmap-line {
-    left: 10px;
-    right: 10px;
+    left: 5px;
+    right: 5px;
   }
 
   .roadmap-markers {
-    margin: 0 10px;
+    margin: 0 5px;
   }
 
   .roadmap-date {
-    font-size: 0.55rem;
+    font-size: 0.5rem;
   }
 
   .roadmap-label {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 
   .roadmap-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
   }
 
   .roadmap-goal-amount {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .roadmap-goal-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .roadmap-goal-text {
+    font-size: 0.8rem;
   }
 
   /* Market */
@@ -1996,17 +2072,21 @@ footer {
     min-height: auto;
   }
 
+  .market-intro {
+    font-size: 0.85rem;
+  }
+
   .globe-container {
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
   }
 
   .market-callouts {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
 
   .market-callout {
@@ -2018,60 +2098,74 @@ footer {
   }
 
   .callout-amount {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .callout-label {
+    font-size: 0.7rem;
+  }
+
+  .market-subtitle {
+    font-size: 0.75rem;
+    margin-top: 2.5rem;
   }
 
   .bubble-row {
-    gap: 1.5rem;
+    gap: 0.8rem;
   }
 
   .bubble-lg {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
   }
 
   .bubble-md {
-    width: 125px;
-    height: 125px;
+    width: 95px;
+    height: 95px;
   }
 
   .bubble-sm {
-    width: 105px;
-    height: 105px;
+    width: 80px;
+    height: 80px;
   }
 
   .bubble-amount {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 
   .bubble-sm .bubble-amount {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .bubble-tag {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 
   .bubble-desc {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
+    max-width: 110px;
   }
 
   .sam-total-amount {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .sam-total {
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .sam-total-note {
+    font-size: 0.8rem;
   }
 
   /* Supporters carousel */
   .supporter-logo img {
-    height: 50px;
-    max-width: 120px;
+    height: 40px;
+    max-width: 100px;
   }
 
   .carousel-track {
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   /* Team */
@@ -2087,7 +2181,7 @@ footer {
 
   /* CTA */
   #contact {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
 
   .contact-icons {
@@ -2120,5 +2214,11 @@ footer {
     width: 50px;
     height: 50px;
     font-size: 1.1rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.75rem;
+    padding: 2rem 1rem;
   }
 }
