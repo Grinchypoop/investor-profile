@@ -713,9 +713,13 @@ section {
 /* ===== SECRET REVEAL ===== */
 #secret {
   text-align: center;
-  min-height: 60vh;
   display: flex;
   align-items: center;
+  padding-bottom: 3rem;
+}
+
+#gtm {
+  padding-top: 3rem;
 }
 
 .secret-container {
