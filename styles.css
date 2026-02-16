@@ -1795,32 +1795,9 @@ footer {
     margin-top: 2rem;
   }
 
-  /* Branches - stack below video on mobile */
+  /* Hide branches on mobile */
   .branch {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    justify-content: center;
-    margin: 1rem auto 0;
-  }
-
-  .branch-left {
-    flex-direction: row;
-  }
-
-  .branch-line {
-    display: none;
-  }
-
-  .branch-dot {
-    display: none;
-  }
-
-  .branch-card {
-    max-width: 100%;
-    text-align: center;
-    min-width: auto;
+    display: none !important;
   }
 
   .video-with-branches {
