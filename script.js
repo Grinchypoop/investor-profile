@@ -100,16 +100,16 @@ document.getElementById('revealBtn').addEventListener('click', () => {
 
   // Show video below the text
   videoWrapper.style.display = 'block';
-  requestAnimationFrame(() => {
-    videoWrapper.classList.add('visible');
-    videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    secretVideo.play();
+  // Force reflow so the browser registers display:block before transitioning
+  videoWrapper.offsetHeight;
+  videoWrapper.classList.add('visible');
+  videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  secretVideo.play();
 
-    // Unhide remaining sections after scroll settles
-    setTimeout(() => {
-      document.querySelectorAll('.hidden-until-reveal').forEach(el => {
-        el.classList.remove('hidden-until-reveal');
-      });
-    }, 1200);
-  });
+  // Unhide remaining sections after scroll settles
+  setTimeout(() => {
+    document.querySelectorAll('.hidden-until-reveal').forEach(el => {
+      el.classList.remove('hidden-until-reveal');
+    });
+  }, 1200);
 });
