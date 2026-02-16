@@ -158,7 +158,7 @@ document.getElementById('revealBtn').addEventListener('click', () => {
       videoWrapper.style.display = 'block';
       requestAnimationFrame(() => {
         videoWrapper.classList.add('visible');
-        secretSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
 
       document.querySelectorAll('.hidden-until-reveal').forEach(el => {
