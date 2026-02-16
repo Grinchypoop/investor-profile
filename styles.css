@@ -949,18 +949,18 @@ section {
 /* Teal glow behind the video */
 .video-glow {
   position: absolute;
-  inset: -30px;
-  border-radius: 30px;
+  inset: -50px;
+  border-radius: 40px;
   background: linear-gradient(135deg, var(--teal), #24b5a5, var(--teal));
   opacity: 0;
-  filter: blur(50px);
+  filter: blur(60px);
   z-index: 0;
   transition: opacity 1.2s ease-out;
   pointer-events: none;
 }
 
 .reveal-section.visible .video-glow {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .video-wrapper {
@@ -970,6 +970,7 @@ section {
   aspect-ratio: 16 / 9;
   border-radius: 16px;
   overflow: hidden;
+  isolation: isolate;
   border: 1px solid #222;
   opacity: 0;
   transform: translateY(30px);
