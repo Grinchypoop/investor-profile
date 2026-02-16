@@ -94,63 +94,76 @@ function typewrite(elementId, text, speed, callback) {
 document.getElementById('revealBtn').addEventListener('click', () => {
   const secretContent = document.getElementById('secretContent');
   const secretSection = document.getElementById('secret');
-  const rect = secretContent.getBoundingClientRect();
+  const isMobile = window.innerWidth <= 600;
 
-  // Create left and right halves of the text content
-  const leftClip = document.createElement('div');
-  leftClip.className = 'text-split-half text-split-left';
-  leftClip.style.width = rect.width + 'px';
-  leftClip.style.height = rect.height + 'px';
-  leftClip.style.left = rect.left + 'px';
-  leftClip.style.top = rect.top + 'px';
-  leftClip.style.clipPath = 'inset(0 50% 0 0)';
-
-  const rightClip = document.createElement('div');
-  rightClip.className = 'text-split-half text-split-right';
-  rightClip.style.width = rect.width + 'px';
-  rightClip.style.height = rect.height + 'px';
-  rightClip.style.left = rect.left + 'px';
-  rightClip.style.top = rect.top + 'px';
-  rightClip.style.clipPath = 'inset(0 0 0 50%)';
-
-  // Clone content into both halves
-  const cloneL = secretContent.cloneNode(true);
-  const cloneR = secretContent.cloneNode(true);
-  cloneL.style.margin = '0';
-  cloneR.style.margin = '0';
-  leftClip.appendChild(cloneL);
-  rightClip.appendChild(cloneR);
-
-  document.body.appendChild(leftClip);
-  document.body.appendChild(rightClip);
-
-  // Hide original
-  secretContent.style.visibility = 'hidden';
-
-  // Slide apart
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      leftClip.classList.add('slide');
-      rightClip.classList.add('slide');
-    });
-  });
-
-  // Show second video + unhide GTM and Traction
-  setTimeout(() => {
-    leftClip.remove();
-    rightClip.remove();
-    secretContent.style.display = 'none';
+  if (isMobile) {
+    // Mobile: keep text, hide button, show video and scroll to it
+    document.querySelector('.reveal-btn-wrapper').style.display = 'none';
 
     const videoWrapper = document.getElementById('secretVideoWrapper');
     videoWrapper.style.display = 'block';
     requestAnimationFrame(() => {
       videoWrapper.classList.add('visible');
-      secretSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
-    // Unhide the sections after reveal
     document.querySelectorAll('.hidden-until-reveal').forEach(el => {
       el.classList.remove('hidden-until-reveal');
     });
-  }, 1000);
+  } else {
+    // Desktop: split text animation
+    const rect = secretContent.getBoundingClientRect();
+
+    const leftClip = document.createElement('div');
+    leftClip.className = 'text-split-half text-split-left';
+    leftClip.style.width = rect.width + 'px';
+    leftClip.style.height = rect.height + 'px';
+    leftClip.style.left = rect.left + 'px';
+    leftClip.style.top = rect.top + 'px';
+    leftClip.style.clipPath = 'inset(0 50% 0 0)';
+
+    const rightClip = document.createElement('div');
+    rightClip.className = 'text-split-half text-split-right';
+    rightClip.style.width = rect.width + 'px';
+    rightClip.style.height = rect.height + 'px';
+    rightClip.style.left = rect.left + 'px';
+    rightClip.style.top = rect.top + 'px';
+    rightClip.style.clipPath = 'inset(0 0 0 50%)';
+
+    const cloneL = secretContent.cloneNode(true);
+    const cloneR = secretContent.cloneNode(true);
+    cloneL.style.margin = '0';
+    cloneR.style.margin = '0';
+    leftClip.appendChild(cloneL);
+    rightClip.appendChild(cloneR);
+
+    document.body.appendChild(leftClip);
+    document.body.appendChild(rightClip);
+
+    secretContent.style.visibility = 'hidden';
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        leftClip.classList.add('slide');
+        rightClip.classList.add('slide');
+      });
+    });
+
+    setTimeout(() => {
+      leftClip.remove();
+      rightClip.remove();
+      secretContent.style.display = 'none';
+
+      const videoWrapper = document.getElementById('secretVideoWrapper');
+      videoWrapper.style.display = 'block';
+      requestAnimationFrame(() => {
+        videoWrapper.classList.add('visible');
+        secretSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      document.querySelectorAll('.hidden-until-reveal').forEach(el => {
+        el.classList.remove('hidden-until-reveal');
+      });
+    }, 1000);
+  }
 });
