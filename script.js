@@ -90,79 +90,26 @@ function typewrite(elementId, text, speed, callback) {
   type();
 }
 
-// ===== Reveal Button — Split text, show second video =====
+// ===== Reveal Button — Show second video below text =====
 document.getElementById('revealBtn').addEventListener('click', () => {
-  const secretContent = document.getElementById('secretContent');
-  const secretSection = document.getElementById('secret');
-  const isMobile = window.innerWidth <= 600;
-
   const videoWrapper = document.getElementById('secretVideoWrapper');
   const secretVideo = document.getElementById('secretVideo');
 
-  function showVideoAndScroll() {
-    videoWrapper.style.display = 'block';
-    requestAnimationFrame(() => {
-      videoWrapper.classList.add('visible');
-      videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      secretVideo.play();
+  // Hide the reveal button
+  document.querySelector('.reveal-btn-wrapper').style.display = 'none';
 
-      // Unhide remaining sections after scroll settles
-      setTimeout(() => {
-        document.querySelectorAll('.hidden-until-reveal').forEach(el => {
-          el.classList.remove('hidden-until-reveal');
-        });
-      }, 1200);
-    });
-  }
+  // Show video below the text
+  videoWrapper.style.display = 'block';
+  requestAnimationFrame(() => {
+    videoWrapper.classList.add('visible');
+    videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    secretVideo.play();
 
-  if (isMobile) {
-    // Mobile: keep text, hide button, show video
-    document.querySelector('.reveal-btn-wrapper').style.display = 'none';
-    showVideoAndScroll();
-  } else {
-    // Desktop: split text animation
-    const rect = secretContent.getBoundingClientRect();
-
-    const leftClip = document.createElement('div');
-    leftClip.className = 'text-split-half text-split-left';
-    leftClip.style.width = rect.width + 'px';
-    leftClip.style.height = rect.height + 'px';
-    leftClip.style.left = rect.left + 'px';
-    leftClip.style.top = rect.top + 'px';
-    leftClip.style.clipPath = 'inset(0 50% 0 0)';
-
-    const rightClip = document.createElement('div');
-    rightClip.className = 'text-split-half text-split-right';
-    rightClip.style.width = rect.width + 'px';
-    rightClip.style.height = rect.height + 'px';
-    rightClip.style.left = rect.left + 'px';
-    rightClip.style.top = rect.top + 'px';
-    rightClip.style.clipPath = 'inset(0 0 0 50%)';
-
-    const cloneL = secretContent.cloneNode(true);
-    const cloneR = secretContent.cloneNode(true);
-    cloneL.style.margin = '0';
-    cloneR.style.margin = '0';
-    leftClip.appendChild(cloneL);
-    rightClip.appendChild(cloneR);
-
-    document.body.appendChild(leftClip);
-    document.body.appendChild(rightClip);
-
-    secretContent.style.visibility = 'hidden';
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        leftClip.classList.add('slide');
-        rightClip.classList.add('slide');
-      });
-    });
-
+    // Unhide remaining sections after scroll settles
     setTimeout(() => {
-      leftClip.remove();
-      rightClip.remove();
-      secretContent.style.display = 'none';
-      showVideoAndScroll();
-    }, 1000);
-  }
+      document.querySelectorAll('.hidden-until-reveal').forEach(el => {
+        el.classList.remove('hidden-until-reveal');
+      });
+    }, 1200);
+  });
 });
