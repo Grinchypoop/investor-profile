@@ -96,20 +96,29 @@ document.getElementById('revealBtn').addEventListener('click', () => {
   const secretSection = document.getElementById('secret');
   const isMobile = window.innerWidth <= 600;
 
-  if (isMobile) {
-    // Mobile: keep text, hide button, show video and scroll to it
-    document.querySelector('.reveal-btn-wrapper').style.display = 'none';
+  const videoWrapper = document.getElementById('secretVideoWrapper');
+  const secretVideo = document.getElementById('secretVideo');
 
-    const videoWrapper = document.getElementById('secretVideoWrapper');
+  function showVideoAndScroll() {
     videoWrapper.style.display = 'block';
     requestAnimationFrame(() => {
       videoWrapper.classList.add('visible');
-      videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+      videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      secretVideo.play();
 
-    document.querySelectorAll('.hidden-until-reveal').forEach(el => {
-      el.classList.remove('hidden-until-reveal');
+      // Unhide remaining sections after scroll settles
+      setTimeout(() => {
+        document.querySelectorAll('.hidden-until-reveal').forEach(el => {
+          el.classList.remove('hidden-until-reveal');
+        });
+      }, 1200);
     });
+  }
+
+  if (isMobile) {
+    // Mobile: keep text, hide button, show video
+    document.querySelector('.reveal-btn-wrapper').style.display = 'none';
+    showVideoAndScroll();
   } else {
     // Desktop: split text animation
     const rect = secretContent.getBoundingClientRect();
@@ -153,17 +162,7 @@ document.getElementById('revealBtn').addEventListener('click', () => {
       leftClip.remove();
       rightClip.remove();
       secretContent.style.display = 'none';
-
-      const videoWrapper = document.getElementById('secretVideoWrapper');
-      videoWrapper.style.display = 'block';
-      requestAnimationFrame(() => {
-        videoWrapper.classList.add('visible');
-        videoWrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-
-      document.querySelectorAll('.hidden-until-reveal').forEach(el => {
-        el.classList.remove('hidden-until-reveal');
-      });
+      showVideoAndScroll();
     }, 1000);
   }
 });
