@@ -1342,73 +1342,99 @@ section {
   margin-bottom: 1rem;
 }
 
-.market-tables {
+.market-visuals {
   margin-top: 4rem;
 }
 
 .market-subtitle {
-  font-size: 1.1rem;
   font-weight: 700;
   color: #27c39f;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
+  text-align: center;
 }
 
-.market-table td strong {
-  color: #ffffff;
-  font-weight: 700;
+/* Bubble Row */
+.bubble-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
-/* SAM Cards */
-.sam-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.sam-card {
-  background: var(--bg-card);
-  border: 1px solid #1a1a1a;
-  border-radius: 12px;
-  padding: 1.5rem;
+.bubble-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  transition: border-color 0.3s;
+  align-items: center;
+  text-align: center;
 }
 
-.sam-card:hover {
+.bubble {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 138, 125, 0.12);
+  border: 2px solid rgba(26, 138, 125, 0.3);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.bubble:hover {
+  transform: scale(1.05);
   border-color: var(--teal);
 }
 
-.sam-segment {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
+.bubble-lg {
+  width: 200px;
+  height: 200px;
 }
 
-.sam-detail {
-  font-size: 0.8rem;
-  color: var(--gray);
-  line-height: 1.5;
+.bubble-md {
+  width: 165px;
+  height: 165px;
 }
 
-.sam-value {
-  font-size: 1.3rem;
+.bubble-sm {
+  width: 135px;
+  height: 135px;
+}
+
+.bubble.accent {
+  background: rgba(39, 195, 159, 0.08);
+  border-color: rgba(39, 195, 159, 0.4);
+}
+
+.bubble-amount {
+  font-size: 1.6rem;
   font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.bubble-sm .bubble-amount {
+  font-size: 1.3rem;
+}
+
+.bubble-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
   color: #27c39f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-top: 0.3rem;
 }
 
-.sam-per {
+.bubble-desc {
   font-size: 0.75rem;
-  font-weight: 400;
   color: var(--gray);
-  margin-left: 4px;
+  margin-top: 0.8rem;
+  max-width: 180px;
+  line-height: 1.4;
 }
 
 /* SAM Total */
@@ -1975,8 +2001,39 @@ footer {
     font-size: 1.5rem;
   }
 
-  .sam-grid {
-    grid-template-columns: 1fr;
+  .bubble-row {
+    gap: 1.5rem;
+  }
+
+  .bubble-lg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bubble-md {
+    width: 125px;
+    height: 125px;
+  }
+
+  .bubble-sm {
+    width: 105px;
+    height: 105px;
+  }
+
+  .bubble-amount {
+    font-size: 1.2rem;
+  }
+
+  .bubble-sm .bubble-amount {
+    font-size: 1rem;
+  }
+
+  .bubble-tag {
+    font-size: 0.6rem;
+  }
+
+  .bubble-desc {
+    font-size: 0.65rem;
   }
 
   .sam-total-amount {
