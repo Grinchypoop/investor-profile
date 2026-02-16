@@ -1413,6 +1413,22 @@ section {
   border-color: rgba(39, 195, 159, 0.4);
 }
 
+.bubble.pink-glow {
+  background: rgba(255, 107, 157, 0.12);
+  border-color: rgba(255, 107, 157, 0.5);
+  box-shadow: 0 0 25px rgba(255, 107, 157, 0.25), 0 0 60px rgba(255, 107, 157, 0.1);
+  animation: pinkPulse 2s ease-in-out infinite;
+}
+
+.bubble.pink-glow .bubble-tag {
+  color: #ff6b9d;
+}
+
+@keyframes pinkPulse {
+  0%, 100% { box-shadow: 0 0 25px rgba(255, 107, 157, 0.25), 0 0 60px rgba(255, 107, 157, 0.1); }
+  50% { box-shadow: 0 0 35px rgba(255, 107, 157, 0.4), 0 0 80px rgba(255, 107, 157, 0.15); }
+}
+
 .bubble-amount {
   font-size: 1.6rem;
   font-weight: 800;
