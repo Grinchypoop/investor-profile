@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noverse Inc — The World's First AI Marking Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HERO / LOGO ANIMATION ===== -->
+  <section id="hero">
+    <div class="hero-content">
+      <svg class="logo-svg" viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- N: Bar 1 white \ (top-left to bottom) -->
+        <line class="logo-bar bar-1" x1="85" y1="50" x2="125" y2="230"
+              stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+        <!-- N: Bar 2 teal / (bottom to top-right) -->
+        <line class="logo-bar bar-2" x1="132" y1="230" x2="172" y2="50"
+              stroke="#1a8a7d" stroke-width="26" stroke-linecap="round"/>
+        <!-- N: Bar 3 white \ (top to bottom-right) -->
+        <line class="logo-bar bar-3" x1="179" y1="50" x2="219" y2="230"
+              stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+        <!-- O: rolls in -->
+        <circle class="logo-o" cx="255" cy="220" r="12" fill="#ffffff"/>
+        <!-- VERSE INC text -->
+        <text class="logo-text" x="285" y="232" fill="#ffffff"
+              font-family="Inter, sans-serif" font-size="38" font-weight="600"
+              letter-spacing="4">VERSE INC</text>
+      </svg>
+      <p class="hero-tagline">The world's <span class="underline-word">first</span> AI marking assistant.</p>
+      <p class="hero-cheeky">Really. The first.</p>
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / DESCRIPTION ===== -->
+  <section id="about" class="reveal-section">
+    <div class="container">
+      <h2 class="section-label">What We Do</h2>
+      <h3 class="section-title">Marking, reimagined.</h3>
+      <p class="section-body">
+        Noverse built the world's first AI-powered marking assistant that marks like a teacher.
+        We're eliminating the hours educators spend on grading by using technology that mirrors
+        their marking — giving them back time to do what matters most: teach.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== DEMO ===== -->
+  <section id="demo" class="reveal-section">
+    <div class="container">
+      <h2 class="section-label">See It In Action</h2>
+      <h3 class="section-title">Don't take our word for it.</h3>
+      <div class="video-frame video-with-branches">
+        <div class="video-glow"></div>
+
+        <!-- Left branch -->
+        <div class="branch branch-left branch-1 demo-branch">
+          <div class="branch-line"></div>
+          <div class="branch-card">
+            <div class="branch-dot"></div>
+            <h4>Recognises Human Handwriting</h4>
+          </div>
+        </div>
+
+        <!-- Right top branch -->
+        <div class="branch branch-right branch-2 demo-branch">
+          <div class="branch-line"></div>
+          <div class="branch-card">
+            <div class="branch-dot"></div>
+            <h4>Advanced Generative AI Engineering</h4>
+          </div>
+        </div>
+
+        <!-- Right bottom branch -->
+        <div class="branch branch-right branch-3 demo-branch">
+          <div class="branch-line"></div>
+          <div class="branch-card">
+            <div class="branch-dot"></div>
+            <h4>Feedback in Teacher's Handwriting</h4>
+          </div>
+        </div>
+
+        <div class="video-wrapper">
+          <video id="demoVideo" muted playsinline>
+            <source src="demo.mp4" type="video/mp4">
+          </video>
+          <div class="video-overlay" id="videoOverlay">
+            <div class="play-btn-ring">
+              <div class="play-btn">&#9654;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECRET REVEAL ===== -->
+  <section id="secret" class="reveal-section">
+    <div class="container secret-container">
+      <div class="secret-content" id="secretContent">
+        <h2 class="section-label">
+          <span class="word-animate">Our</span>
+          <span class="word-animate">Biggest</span>
+          <span class="word-animate">Secret</span>
+        </h2>
+        <h3 class="secret-title">
+          <span class="word-animate">It</span>
+          <span class="word-animate">marks</span>
+          <span class="word-animate highlight-text">English</span>
+          <span class="word-animate">&amp;</span>
+          <span class="word-animate highlight-text">Humanities.</span>
+        </h3>
+        <p class="section-body secret-body">
+          <span class="word-animate">Not</span>
+          <span class="word-animate">just</span>
+          <span class="word-animate">multiple</span>
+          <span class="word-animate">choice.</span>
+          <span class="word-animate">Not</span>
+          <span class="word-animate">just</span>
+          <span class="word-animate">maths.</span>
+          <span class="word-animate">Our</span>
+          <span class="word-animate">AI</span>
+          <span class="word-animate">understands</span>
+          <span class="word-animate">language,</span>
+          <span class="word-animate">context,</span>
+          <span class="word-animate">and</span>
+          <span class="word-animate">nuance</span>
+          <span class="word-animate">—</span>
+          <span class="word-animate">marking</span>
+          <span class="word-animate">essays,</span>
+          <span class="word-animate">short</span>
+          <span class="word-animate">answers,</span>
+          <span class="word-animate">and</span>
+          <span class="word-animate">subjective</span>
+          <span class="word-animate">responses</span>
+          <span class="word-animate">the</span>
+          <span class="word-animate">way</span>
+          <span class="word-animate">a</span>
+          <span class="word-animate">teacher</span>
+          <span class="word-animate">would.</span>
+        </p>
+        <p class="secret-kicker" id="secretKicker"></p>
+
+        <div class="reveal-btn-wrapper">
+          <button id="revealBtn" class="reveal-button">
+            <span class="reveal-btn-text">Reveal</span>
+            <span class="reveal-btn-shine"></span>
+            <span class="reveal-btn-border border-tl"></span>
+            <span class="reveal-btn-border border-tr"></span>
+            <span class="reveal-btn-border border-bl"></span>
+            <span class="reveal-btn-border border-br"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Second demo video (hidden until reveal) -->
+      <div class="secret-video-wrapper" id="secretVideoWrapper">
+        <div class="video-with-branches">
+          <!-- Left branch -->
+          <div class="branch branch-left branch-1">
+            <div class="branch-line"></div>
+            <div class="branch-card">
+              <div class="branch-dot"></div>
+              <h4>Marks with teacher's handwriting</h4>
+            </div>
+          </div>
+
+          <!-- Right top branch -->
+          <div class="branch branch-right branch-2">
+            <div class="branch-line"></div>
+            <div class="branch-card">
+              <div class="branch-dot"></div>
+              <h4>Accuracy</h4>
+              <p class="branch-stat">With answer key <strong>100%</strong></p>
+            </div>
+          </div>
+
+          <!-- Right bottom branch -->
+          <div class="branch branch-right branch-3">
+            <div class="branch-line"></div>
+            <div class="branch-card">
+              <div class="branch-dot"></div>
+              <h4>O-Level Humanities</h4>
+            </div>
+          </div>
+
+          <div class="video-wrapper">
+            <video id="secretVideo" controls muted playsinline>
+              <source src="demo2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GO TO MARKET ===== -->
+  <section id="gtm" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <div class="gtm-tree">
+        <!-- Root -->
+        <div class="gtm-root">
+          <h3>Go-To-Market Strategy</h3>
+        </div>
+
+        <div class="gtm-connector-down"></div>
+
+        <!-- Level 1: Two main branches -->
+        <div class="gtm-level">
+          <div class="gtm-connector-horizontal"></div>
+
+          <!-- Web App Branch -->
+          <div class="gtm-node-group">
+            <div class="gtm-node highlight-node">
+              Web App
+              <span class="gtm-status-inline"><span class="pulse-dot live"></span>Live — MOE school</span>
+            </div>
+            <div class="gtm-connector-down small"></div>
+            <div class="gtm-sub-level">
+              <div class="gtm-connector-horizontal small"></div>
+              <div class="gtm-leaf">Schools / Private Schools</div>
+              <div class="gtm-leaf">Tuition Centres</div>
+            </div>
+          </div>
+
+          <!-- API Service Branch -->
+          <div class="gtm-node-group">
+            <div class="gtm-node highlight-node">
+              API Service
+              <span class="gtm-status-inline"><span class="pulse-dot upcoming"></span>March 2026</span>
+            </div>
+            <div class="gtm-connector-down small"></div>
+            <div class="gtm-sub-level">
+              <div class="gtm-connector-horizontal small"></div>
+              <div class="gtm-leaf">Existing LMS Platforms</div>
+              <div class="gtm-leaf">Competitors Building Marking Assistants</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRACTION ===== -->
+  <section id="traction" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">Traction</h2>
+      <h3 class="section-title">Already in the field.</h3>
+
+      <div class="traction-timeline">
+        <div class="traction-line"></div>
+
+        <div class="traction-item traction-simple">
+          <div class="traction-date"></div>
+          <div class="traction-node">
+            <div class="traction-node-dot"></div>
+          </div>
+          <span class="traction-launch">Launched December '25</span>
+        </div>
+
+        <div class="traction-item">
+          <div class="traction-date">Jan '26</div>
+          <div class="traction-node">
+            <div class="traction-node-dot"></div>
+          </div>
+          <div class="traction-card">
+            <div class="traction-tag pulse-pink">MOE Approved</div>
+            <h4>Fuhua Secondary School</h4>
+            <p>Running a pilot in a Singapore MOE school</p>
+          </div>
+        </div>
+
+        <div class="traction-item">
+          <div class="traction-date">Feb '26</div>
+          <div class="traction-node">
+            <div class="traction-node-dot"></div>
+          </div>
+          <div class="traction-card">
+            <div class="traction-tag pulse-pink">Paid Pilot</div>
+            <h4>NTU — Physics Department</h4>
+            <p>Paid pilot with Nanyang Technological University</p>
+          </div>
+        </div>
+
+        <div class="traction-item">
+          <div class="traction-date">Mar '26</div>
+          <div class="traction-node">
+            <div class="traction-node-dot"></div>
+          </div>
+          <div class="traction-card">
+            <div class="traction-tag">In Talks</div>
+            <h4>SLS &amp; NALA Platform</h4>
+            <p>Integration discussions with NTU's Student Learning Space (SLS) and NTU's edtech platform NALA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPETITOR ANALYSIS ===== -->
+  <section id="competitors" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">Competitor Analysis</h2>
+      <h3 class="section-title">Where we stand.</h3>
+
+      <div class="comp-table-wrapper">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th class="feature-col">Feature</th>
+              <th class="novo-col">Novo</th>
+              <th>Gradescope</th>
+              <th>Turnitin</th>
+              <th>Traditional Auto-Graders</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Humanities essay evaluation</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>STEM grading</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="partial">Partial</span></td>
+            </tr>
+            <tr>
+              <td>Language assessment</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>Handwritten submission OCR</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="partial">Partial</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>Rubric-aligned feedback</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="partial">Partial</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>Calibrated to SG curriculum</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+            <tr>
+              <td>Works for tuition centres</td>
+              <td class="novo-col"><span class="check">&#10003;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+              <td><span class="cross">&#10005;</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEED ROUND ===== -->
+  <section id="raise" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">Seed Round</h2>
+      <h3 class="section-title">We're raising.</h3>
+      <div class="raise-grid">
+        <div class="raise-card highlight">
+          <span class="raise-amount">$400K</span>
+          <span class="raise-label">SAFE Notes</span>
+        </div>
+      </div>
+      <div class="use-of-funds">
+        <h4>Use of Funds</h4>
+        <div class="fund-bars">
+          <div class="fund-item">
+            <div class="fund-info">
+              <span>Training Our Own Model</span>
+              <span>$200K</span>
+            </div>
+            <div class="fund-bar"><div class="fund-fill" style="--fill-width: 50%"></div></div>
+          </div>
+          <div class="fund-item">
+            <div class="fund-info">
+              <span>Data Collection from Schools &amp; Tuition Centres</span>
+              <span>$150K</span>
+            </div>
+            <div class="fund-bar"><div class="fund-fill" style="--fill-width: 37.5%"></div></div>
+          </div>
+          <div class="fund-item">
+            <div class="fund-info">
+              <span>Sales &amp; Marketing</span>
+              <span>$50K</span>
+            </div>
+            <div class="fund-bar"><div class="fund-fill" style="--fill-width: 12.5%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section id="roadmap" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">12-Month Roadmap</h2>
+      <h3 class="section-title">March '26 → March '27</h3>
+
+      <div class="roadmap-track">
+        <div class="roadmap-line"></div>
+
+        <div class="roadmap-markers">
+          <div class="roadmap-marker" style="left: 0%">
+            <div class="roadmap-dot active"></div>
+            <span class="roadmap-date">Mar '26</span>
+            <span class="roadmap-label">3 institutions</span>
+          </div>
+          <div class="roadmap-marker" style="left: 25%">
+            <div class="roadmap-dot"></div>
+            <span class="roadmap-date">Jun '26</span>
+            <span class="roadmap-label">6 institutions</span>
+          </div>
+          <div class="roadmap-marker" style="left: 50%">
+            <div class="roadmap-dot"></div>
+            <span class="roadmap-date">Sep '26</span>
+            <span class="roadmap-label">10 institutions</span>
+          </div>
+          <div class="roadmap-marker" style="left: 75%">
+            <div class="roadmap-dot"></div>
+            <span class="roadmap-date">Dec '26</span>
+            <span class="roadmap-label">13 institutions</span>
+          </div>
+          <div class="roadmap-marker" style="left: 100%">
+            <div class="roadmap-dot target"></div>
+            <span class="roadmap-date">Mar '27</span>
+            <span class="roadmap-label target-label">15 institutions</span>
+          </div>
+        </div>
+
+        <div class="roadmap-fill"></div>
+      </div>
+
+      <div class="roadmap-goal">
+        <div class="roadmap-goal-card">
+          <span class="roadmap-goal-amount">$100K ARR</span>
+          <span class="roadmap-goal-text">Target within 12 months → Series A</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARKET OPPORTUNITY ===== -->
+  <section id="market" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">Market Opportunity</h2>
+      <h3 class="section-title">A Massive, Growing Market — And We're Already Inside It.</h3>
+      <p class="section-body market-intro">
+        Novo sits at the intersection of three large, overlapping markets in Singapore — all growing rapidly, all underserved by existing assessment tools.
+      </p>
+
+      <!-- Globe + Callouts -->
+      <div class="market-layout">
+        <div class="globe-container" id="globeContainer"></div>
+        <div class="globe-labels" id="globeLabels"></div>
+
+        <div class="market-callouts">
+          <div class="market-callout callout-1">
+            <div class="callout-arrow">&#8599;</div>
+            <div class="callout-content">
+              <span class="callout-amount">US$41B</span>
+              <span class="callout-label">AI in Education by 2030 (42.8% CAGR)</span>
+            </div>
+          </div>
+          <div class="market-callout callout-2">
+            <div class="callout-arrow">&#8600;</div>
+            <div class="callout-content">
+              <span class="callout-amount">US$3.8B</span>
+              <span class="callout-label">AI Assessment & Grading Tools by 2035</span>
+            </div>
+          </div>
+          <div class="market-callout callout-3">
+            <div class="callout-arrow">&#8599;</div>
+            <div class="callout-content">
+              <span class="callout-amount">46.7%</span>
+              <span class="callout-label">CAGR — Adaptive Assessment is the fastest-growing AI education segment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Singapore Market -->
+      <div class="market-tables">
+        <h4 class="market-subtitle">Singapore's Education Spending</h4>
+        <div class="comp-table-wrapper">
+          <table class="comp-table market-table">
+            <thead>
+              <tr>
+                <th class="feature-col">Market Segment</th>
+                <th>Size</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Private Tuition</td>
+                <td><strong>S$1.8B</strong> (2023)</td>
+                <td>Projected S$2.1B+ by 2025. 70% of students attend tuition; 1,000+ centres</td>
+              </tr>
+              <tr>
+                <td>EdTech Market</td>
+                <td><strong>US$2.2B</strong> by 2027</td>
+                <td>13.6% CAGR; backed by MOE EdTech Masterplan 2030</td>
+              </tr>
+              <tr>
+                <td>Total Education Market</td>
+                <td><strong>US$3.5B</strong></td>
+                <td>S$14.8B government education budget in 2024</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="market-subtitle">The Global Tailwind</h4>
+        <div class="comp-table-wrapper">
+          <table class="comp-table market-table">
+            <thead>
+              <tr>
+                <th class="feature-col">Segment</th>
+                <th>Size</th>
+                <th>Growth</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI in Education (Global)</td>
+                <td><strong>US$6.9B</strong> (2025)</td>
+                <td>42.8% CAGR → US$41B by 2030</td>
+              </tr>
+              <tr>
+                <td>AI Assessment & Grading</td>
+                <td><strong>US$687M</strong> (2025)</td>
+                <td>→ US$3.8B by 2035</td>
+              </tr>
+              <tr>
+                <td>SEA EdTech Market</td>
+                <td><strong>US$10.7B</strong> (2024)</td>
+                <td>14.7% CAGR → US$41.5B by 2033</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Addressable Market -->
+        <h4 class="market-subtitle">Our Addressable Market</h4>
+        <div class="sam-grid">
+          <div class="sam-card">
+            <span class="sam-segment">Schools</span>
+            <span class="sam-detail">350+ secondary schools, JCs & international schools in SG</span>
+            <span class="sam-value">S$5K–15K<span class="sam-per">/yr per institution</span></span>
+          </div>
+          <div class="sam-card">
+            <span class="sam-segment">Universities</span>
+            <span class="sam-detail">6 autonomous universities + polytechnics</span>
+            <span class="sam-value">S$10K–50K<span class="sam-per">/yr API integration</span></span>
+          </div>
+          <div class="sam-card">
+            <span class="sam-segment">Tuition Centres</span>
+            <span class="sam-detail">1,000+ registered centres</span>
+            <span class="sam-value">S$2K–5K<span class="sam-per">/yr SaaS subscription</span></span>
+          </div>
+        </div>
+
+        <div class="sam-total">
+          <span class="sam-total-label">Conservative Singapore SAM</span>
+          <span class="sam-total-amount">S$50–100M</span>
+          <span class="sam-total-note">With Southeast Asia expansion (650M population), the opportunity scales dramatically.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUPPORTED BY ===== -->
+  <section id="supporters" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">Supported By</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="supporter-logo"><img src="nvidia.webp" alt="NVIDIA"></div>
+          <div class="supporter-logo"><img src="moe.webp" alt="Ministry of Education Singapore"></div>
+          <div class="supporter-logo"><img src="ntu.webp" alt="Nanyang Technological University"></div>
+          <div class="supporter-logo"><img src="ntuitive.webp" alt="NTUitive"></div>
+          <div class="supporter-logo"><img src="startup-sg.webp" alt="Startup SG"></div>
+          <div class="supporter-logo"><img src="microsoft.webp" alt="Microsoft for Startups Founders Hub"></div>
+          <!-- Duplicated for seamless loop -->
+          <div class="supporter-logo"><img src="nvidia.webp" alt="NVIDIA"></div>
+          <div class="supporter-logo"><img src="moe.webp" alt="Ministry of Education Singapore"></div>
+          <div class="supporter-logo"><img src="ntu.webp" alt="Nanyang Technological University"></div>
+          <div class="supporter-logo"><img src="ntuitive.webp" alt="NTUitive"></div>
+          <div class="supporter-logo"><img src="startup-sg.webp" alt="Startup SG"></div>
+          <div class="supporter-logo"><img src="microsoft.webp" alt="Microsoft for Startups Founders Hub"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section id="team" class="reveal-section hidden-until-reveal">
+    <div class="container">
+      <h2 class="section-label">The Team</h2>
+      <h3 class="section-title">Built by people who get it.</h3>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar"><img src="mehtaz.jpg" alt="Mehtaz"></div>
+          <h4>Mehtaz</h4>
+          <p>Founder & CEO</p>
+          <span class="team-bio">7 years of teaching experience. Interned at MOE Headquarters. 2x Founder.</span>
+          <a href="https://www.linkedin.com/in/mehtaz-haque-/" target="_blank" class="team-linkedin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="vasanth.jpg" alt="Vasanth Sreeram"></div>
+          <h4>Vasanth Sreeram</h4>
+          <p>Co-founder & CTO</p>
+          <span class="team-bio">Full Stack Developer. Built tech for NTU. 2x Founder — previously built his own coding tuition startup.</span>
+          <a href="https://www.linkedin.com/in/vasanthsreeram/" target="_blank" class="team-linkedin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section id="contact" class="reveal-section hidden-until-reveal">
+    <div class="container cta-container">
+      <h3 class="section-title">Let's talk.</h3>
+      <p class="section-body">Interested in joining our seed round? We'd love to hear from you.</p>
+      <div class="contact-details">
+        <a href="tel:+6598901171" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27c39f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +65 9890 1171
+        </a>
+        <a href="mailto:mehtaz@noverseinc.com" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27c39f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          mehtaz@noverseinc.com
+        </a>
+        <a href="mailto:mehtaz001@e.ntu.edu.sg" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27c39f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          mehtaz001@e.ntu.edu.sg
+        </a>
+        <a href="https://www.linkedin.com/in/mehtaz-haque-/" target="_blank" class="contact-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="hidden-until-reveal">
+    <p>&copy; 2026 Noverse Inc. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="script.js"></script>
+  <script src="globe.js"></script>
+</body>
+</html>
