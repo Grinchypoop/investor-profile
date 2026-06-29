@@ -1619,6 +1619,29 @@ section {
   color: var(--gray);
 }
 
+/* Why we're raising */
+.raise-why {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  background: rgba(26, 138, 125, 0.06);
+  border: 1px solid rgba(39, 195, 159, 0.15);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  text-align: left;
+}
+
+.raise-why p {
+  font-size: 0.95rem;
+  color: var(--light-gray);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.raise-why strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 /* Use of funds */
 .use-of-funds {
   max-width: 600px;
